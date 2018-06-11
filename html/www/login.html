@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>欢迎来到学工系统,请登录</title>
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/button.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="scripts/jquery-3.1.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#div1").click(function(){
+		$("#div1").animate({height:'450px'},"slow");
+		$("#div1").animate({width:'1280px'},"slow");
+		});
+		$("#div1").triggerHandler("click");
+		$("#a1").click(function(){
+			$("#a1").hide();
+			$("#div1").animate({width:'2px'},"slow");
+			$("#div1").animate({height:'0px'},"slow");
+			$("h1").hide();
+			$("#div3").show(3000);
+			$("#div2").show(3000);
+			$("#bgimg").show(3000);
+			});
+});
+function checkname(){
+	$.ajax({
+        url: "login.php",
+        async: false,//改为同步方式
+        type: "POST",
+        data: {username:$("#username").val(),password:$("#password").val()},
+        success: function (data) {
+            if(data=="用户名或密码错误"){
+				alert(data);
+				x=1;
+				}
+			else{
+			    x=0;
+			}
+        }
+    });
+	if(this.x==1){
+			return false;
+			}
+		else{
+			return true;
+			}
+	}
+</script>
+<style type="text/css">
+*{margin:0px;
+padding:auto;}
+#bgimg{width:1366px;
+height:500px;
+background:url(img/15.jpg);
+background-size:1366px 500px;
+display:none;}
+#ALL,#top{width:1280px;
+margin:0px auto;}
+#ALL{height:600px;}
+#div1{width:5px;
+height:5px;
+margin:0px auto;
+background-color:#aa0000;
+color:#FF0;
+animation:bg 5s;}
+#div2{
+text-align:center;
+width:650px;
+height:450px;
+margin:0px auto;
+display:none;
+float:left;}
+#div3{width:600px;
+height:350px;
+margin:0px auto;
+text-align:center;
+display:none;
+float:left;}
+.div3_1,.div3_2{width:580px;
+height:110px;
+text-align:center;}
+.div3_1{margin:10px 30px;}
+.div3_2{margin:50px 30px;}
+.div3_1_1{width:100px;
+height:110px;
+line-height:110px;
+float:left;}
+.div3_1_2{text-align:left;
+width:445px;
+height:110px;
+float:left;}
+.div3_2_1{width:340px;}
+.div3_2_2{width:205px;
+text-align:left;}
+.div3_2_1,.div3_2_2{
+height:110px;
+line-height:110px;
+float:left;}
+#bottom{width:70%;
+text-align:center;
+position:fixed;
+left:15%;
+right:0px;
+bottom:0px;
+background-color:#F3F;}
+#login{width:1280px;
+margin:0px auto;
+text-align:center;}
+#a1{margin:30px auto;}
+h2{width:900px;
+	margin:0px auto;
+	text-align:right;
+color:#30F;
+font-weight:bold;
+text-shadow:5px 5px 5px #60F;}
+#username,#password{margin-top:70px;}
+@keyframes bg{
+	from{background-color:#03F;color:#93F;}
+	to{background-color:#aa0000;color:#FF0;}
+	}
+@-moz-keyframes bg{
+	from{background-color:#03F;color:#93F;}
+	to{background-color:#aa0000;color:#FF0;}
+	}
+@-webkit-keyframes bg{
+	from{background-color:#03F;color:#93F;}
+	to{background-color:#aa0000;color:#FF0;}
+}
+@-o-keyframes bg{
+	from{background-color:#03F;color:#93F;}
+	to{background-color:#aa0000;color:#FF0;}
+	}
+</style>
+</head>
+
+
+<body style="text-align:center;">
+<div id="top"><p><h2>西南民族大学学工系统</h2></p></div>
+<div id="div1">
+<center><p><h1>欢迎来到学工系统</h1></p></center>
+</div>
+<div id="login">
+  <button type="button" class="button button-highlight button-rounded button-large" id="a1"><h4>登录</h4></button>
+</div>
+<div id="bgimg">
+<div id="ALL">
+<div id="div2">
+<img src="img/36108.jpg" id="img1"/>
+</div>
+<div id="div3">
+<form id="form1" action="main.html" method="post" onSubmit="return checkname()">
+<div class="div3_1">
+<div></div>
+<div class="div3_1_1">
+<p style="margin-top:70px"><h4 style="font-weight:bold;">用户名：</h4></p>
+</div>
+<div class="div3_1_2">
+<label><input type="text" name="username" id="username" class="form-control" placeholder="输入用户名，长度不得大于12个字符" maxlength="12" size="50%"/></label>
+</div>
+</div>
+<div class="div3_1">
+<div></div>
+<div class="div3_1_1">
+<p style="margin-top:70px;"><h4 style="font-weight:bold;">密&nbsp;&nbsp;码：</h4></p>
+</div>
+<div class="div3_1_2">
+<label>
+<input type="password" name="password" id="password" class="form-control" placeholder="输入密码，长度不得大于12个字符" maxlength="12" size="50%"/></label>
+</div>
+</div>
+<div class="div3_2">
+<div class="div3_2_1">
+<button type="submit" class="button button-3d button-caution" id="a2">登录</button>
+</div>
+<div class="div3_2_2">
+<a href="register.html" class="button button-3d button-royal">注册</a>
+</div>
+</div>
+</form>
+</div>
+
+<div id="bottom">
+本网页最终解释权归创作人冯立辉所有
+</div>
+</div>
+</div>
+</body>
+</html>

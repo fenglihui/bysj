@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>系统主界面</title>
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/button.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="scripts/jquery-3.1.1.min.js"></script>
+<script src="scripts/jquery.cookie.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/main.css">
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#p1").click(function(){
+		$("#infor1").slideToggle("slow");
+		});
+	$("#p2").click(function(){
+		$("#guize1").slideToggle("slow");
+		});
+	$("#p3").click(function(){
+		$("#score1").slideToggle("slow");
+		});
+	$("#p4").click(function(){
+		$("#money1").slideToggle("slow");
+		});
+	$("#p5").click(function(){
+		$("#pingce1").slideToggle("slow");
+		});
+	$("#p6").click(function(){
+		$("#total1").slideToggle("slow");
+		});
+	$("#top1").click(function(){
+		$("#top1").addClass('animated rubberBand');
+	    setTimeout(function(){
+        $("#top1").removeClass('rubberBand');
+          }, 3000);
+	    });
+	$("#top2_2_2").text($.cookie("name"));
+	if($.cookie("loginstyle")==1){
+	$("#p2").css("display","none");
+	$("#p6").css("display","none");
+	}
+	else{
+	$("#p2").css("display","block");
+	$("#p6").css("display","block");
+	}
+});
+function show(){
+	var mydate=new Date();
+	var y=mydate.getFullYear();
+	var n=mydate.getMonth();
+	var d=mydate.getDate();
+	var w=mydate.getDay();
+	var h=mydate.getHours();
+	var m=mydate.getMinutes();
+	var s=mydate.getSeconds();
+	w=checkweek(w);
+	m=checkTime(m);
+	s=checkTime(s);
+	document.getElementById("top2_1_2").innerHTML=y+"年"+(n+1)+"月"+d+"日  "+w+"  "+h+":"+m+":"+s;
+	t=setTimeout('show()',1000);
+	}
+function checkTime(i){
+if (i<10) {
+  i="0" + i;
+}
+  return i;
+}
+function checkweek(i){
+var x;
+switch(i){
+	case 0:
+		x="星期天";
+		return x;
+		break;
+	case 1:
+		x="星期一";
+		return x;
+		break;
+	case 2:
+		x="星期二";
+		return x;
+		break;
+	case 3:
+		x="星期三";
+		return x;
+		break;
+	case 4:
+		x="星期四";
+		return x;
+		break;
+	case 5:
+		x="星期五";
+		return x;
+		break;
+	case 6:
+		x="星期六";
+		return x;
+		break;
+		}
+	}
+window.onload= show;
+if($.cookie("username")==undefined||$.cookie("username")==""){
+		window.location.href='login.html';
+}
+</script>
+</head>
+
+<body>
+<div id="all">
+<div id="top">
+<div id="top1" class="animated rubberBand">
+欢迎来到奖学金申请预评测系统
+</div>
+<div id="top2">
+<div class="top2">
+<div id="top2_1_1">
+时间：
+</div>
+<div id="top2_1_2">
+</div>
+</div>
+<div class="top2">
+<div id="top2_2_1">
+欢迎用户：
+</div>
+<div id="top2_2_2">
+</div>
+<div id="top2_2_3">
+<a href="login.html">切换用户</a>
+</div>
+</div>
+</div>
+</div>
+<div id="mid">
+<div id="mid1">
+</div>
+<div id="mid2">
+<ul id="nav">
+<li class="nav1 button-glow"><a href="#">友情链接</a>
+<ul>
+<li><a href="http://www.swun.edu.cn/">民大官网</a></li>
+<li><a href="http://www.scu.edu.cn/">川大官网</a></li>
+<li><a href="http://www.cuit.edu.cn/">成信官网</a></li>
+</ul>
+</li>
+<li class="nav1 button-glow"><a href="#">其他系统</a>
+<ul>
+<li><a href="http://211.83.241.245/">教务系统</a></li>
+<li><a href="https://card.swun.edu.cn/">一卡通系统</a></li>
+<li><a href="http://211.83.240.11/">财务系统</a></li>
+<li><a href="http://211.83.241.177/">人事系统</a></li>
+</ul>
+</li>
+<li class="nav1 button-glow"><a href="#">学校风采</a>
+<ul>
+<li><a href="http://www.swun.edu.cn/xxgk/xyfg.htm">校园活动</a></li>
+<li><a href="http://www.swun.edu.cn/xxgk/lsyg.htm">先进事迹</a></li>
+<li><a href="http://www.swun.edu.cn/xxgk/xxjj.htm">民族政策</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="bot">
+<div id="bot_left">
+<div id="infor">
+<p id="p1" class="sty button-3d">基本信息</p>
+</div>
+<div id="infor1">
+<a class="wid button button-glow button-border button-primary button-block" href="checkinfor.php" target="frame">查询信息</a></p>
+<a class="wid button button-glow button-border button-primary button-block" href="changeinfor.php" target="frame">修改信息</a></p>
+</div>
+<div id="guize">
+<p id="p2" class="sty button-3d">评测规则管理</p>
+</div>
+<div id="guize1">
+<!--<a class="wid button button-glow button-border button-primary button-block" href="checkguize.html" target="frame">评测规则查询</a>-->
+<a class="wid button button-glow button-border button-primary button-block" href="updateguize.html" target="frame">评测规则修改</a>
+</div>
+<div id="score">
+<p id="p3" class="sty button-3d">成绩信息</p>
+</div>
+<div id="score1">
+<a class="wid button button-glow button-border button-primary button-block" href="checkscore2.html" target="frame">成绩录入</a>
+<a class="wid button button-glow button-border button-primary button-block" href="checkscore.html" target="frame">成绩查询</a>
+</div>
+<div id="money">
+<p id="p4" class="sty button-3d">奖学金申请</p>
+</div>
+<div id="money1">
+<a class="wid button button-glow button-border button-primary button-block" href="countrymoney.php" target="frame">各类奖学金申请</a></p>
+<!--<a class="wid button button-glow button-border button-primary button-block" href="schoolmoney.php" target="frame">校级奖学金</a></p>
+<a class="wid button button-glow button-border button-primary button-block" href="collegemoney.php" target="frame">院级奖学金</a></p>
+-->
+</div>
+<div id="pingce">
+<p id="p5" class="sty button-3d">奖学金申请评测</p>
+</div>
+<div id="pingce1">
+<a class="wid button button-glow button-border button-primary button-block" href="checkpingce.html" target="frame">评测结果查询</a>
+</div>
+<div id="total">
+<p id="p6" class="sty button-3d">评测结果统计</p>
+</div>
+<div id="total1">
+<a class="wid button button-glow button-border button-primary button-block" href="totalpingce.php" target="frame">评测结果统计查询</a>
+<a class="wid button button-glow button-border button-primary button-block" href="exceptpingce.php" target="frame">评测结果导出</a>
+</div>
+</div>
+<div id="bot_right">
+<iframe name="frame" src="" frameborder="0" width="1066px" height="550px"></iframe>
+</div>
+</div>
+</div>
+</body>
+</html>

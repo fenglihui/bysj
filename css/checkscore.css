@@ -1,0 +1,38 @@
+*{margin:0px;
+padding:0px;}
+#all{width: 1066px;
+height: auto;}
+#title{margin:0px auto;
+width: 900px;
+height:70px;
+line-height:70px;
+text-align:center;
+font-size:24px;
+font-weight:bold;
+color:#FF3300;}
+#by{margin:0px auto;
+width:900px;
+height: auto;}
+.scorename,.score{display:block;
+margin:0px auto;
+width:449px;
+height:40px;
+border:1px solid yellow;
+float:left;
+text-align:center;	
+line-height:40px;
+}
+.ht{display:block;
+width:449px;
+height:40px;}
+.st{margin:40px auto;
+text-align:center;}
+#st{margin:40px auto;
+text-align:center;}
+#qingkong{position:absolute;
+display:block;
+top:60px;
+right:70px;
+width:150px;
+height:30px;
+}

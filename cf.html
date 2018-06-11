@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script type="text/javascript">
+function cf(){
+	var a=["a","a","a","d","b","b","b","z","s","d","q","e","e","e","w"];
+	var b=[];
+	for(i=0;i<a.length;i++){
+		if(b.indexOf(a[i])<0){
+			b.push(a[i]);
+			}
+		}
+	document.write(b.sort()+"<br/>");
+	for(j=0;j<b.length;j++){
+		for(k=j+1;k<b.length;k++){
+			if(b[j]>b[k]){
+				var mn=b[j];
+				b[j]=b[k];
+				b[k]=mn;
+				}
+			}
+	}
+	document.write(b);
+}
+window.onload=cf;
+</script>
+</head>
+
+<body>
+</body>
+</html>

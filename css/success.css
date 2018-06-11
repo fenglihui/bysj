@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;
+padding:0;}
+#all{margin:0 auto;
+width:1000px;
+height:auto;}
+#top{margin-top:100px;
+width:1000px;
+height:300px;
+line-height:300px;
+font-size:36px;
+font-weight:bold;
+text-align:center;
+background:#3FC;
+color:#F00;}
+#mid{width:1000px;
+height:100px;
+line-height:100px;
+font-size:16px;
+text-align:center;
+background:#CCC;
+color:#333;}
+a{color:#00F;
+text-decoration:none;}
+a:hover{text-decoration:none;}
+a:visited{text-decoration:none;}
+a:link{text-decoration:none;}

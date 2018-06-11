@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>成绩录入</title>
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/checkscore.css">
+<link rel="stylesheet" href="css/button.css">
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="scripts/jquery-3.1.1.min.js"></script>
+<script src="scripts/jquery.cookie.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("#qk").click(function(){
+$.post("qk.php",function(data){
+if(data=="清空成功"){
+alert(data);
+}
+},"text");
+});
+});
+</script>
+</head>
+<body>
+<form action="checkscore2.php" method="post">
+<div id="all">
+<div id="title"><span>成绩信息录入</span></div>
+<div id="by">
+<div class="scorename"><span>课程代码</span></div><div class="score">分数</div>
+<div class="scorename"><input type="number" name="course1" id="course1" class="ht" placeholder="请输入课程代码为10001到10008之间的课程"></div>
+<div class="score"><input type="number" name="score1" id="score1" class="ht"></div>
+<div class="scorename"><input type="number" name="course2" id="course2" class="ht" placeholder="请输入课程代码为10001到10008之间的课程"></div>
+<div class="score"><input type="number" name="score2" id="score2" class="ht"></div>
+<div class="scorename"><input type="number" name="course3" id="course3" class="ht" placeholder="请输入课程代码为10001到10008之间的课程"></div>
+<div class="score"><input type="number" name="score3" id="score3" class="ht"></div>
+<div class="scorename"><input type="number" name="course4" id="course4" class="ht" placeholder="请输入课程代码为10001到10008之间的课程"></div>
+<div class="score"><input type="number" name="score4" id="score4" class="ht"></div>
+<div class="scorename"><input type="number" name="course5" id="course5" class="ht" placeholder="请输入课程代码为10001到10008之间的课程"></div>
+<div class="score"><input type="number" name="score5" id="score5" class="ht"></div>
+<div class="scorename"><input type="number" name="course6" id="course6" class="ht" placeholder="请输入课程代码为10001到10008之间的课程"></div>
+<div class="score"><input type="number" name="score6" id="score6" class="ht"></div>
+<div class="st">
+<button type="submit" id="st" class="button button-glow button-rounded button-highlight">提交</button>
+</div>
+</div>
+</div>
+</form>
+<div id="qingkong"><button id="qk" class="button button-glow button-rounded button-caution">清空成绩</button></div>
+</body>
+
+</html>

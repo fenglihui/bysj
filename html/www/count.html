@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<script type="text/javascript">
+var str = "aaaabbbccccddfgh";
+var obj1 =/ /; 
+var obj  = {};
+for(var i=0;i<str.length;i++){
+    var v = str.charAt(i);
+    if(obj[v] && obj[v].value == v){
+        obj[v].count = ++ obj[v].count;
+    }else{
+        obj[v] = {};
+        obj[v].count = 1;
+        obj[v].value = v;
+    }
+}
+for(key in obj){
+	if(obj[key].count==1){
+		document.write(obj[key].value);
+		}
+	else{
+    document.write( obj[key].count+obj[key].value);
+	}// a=4  b=3  c=4  d=2  f=1  g=1  h=1 
+}   
+</script>
+</body>
+</html>

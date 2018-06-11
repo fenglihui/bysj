@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录&nbsp&nbsp继续访问&nbsp&nbsp个人主页</title>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/button.css">
+</head>
+<body>
+<div id="all">
+    <form action="php/login.php" method="post" class="include form-group" id="login" name="login">
+        <div class="login-img" id="login-img">
+            <img src="img/timg2.jpg" alt="登录图标">
+        </div>
+        <div class="title">
+            <p style="font-size: 24px;">登录</p>
+            <p style="font-size: 18px;">继续访问&nbsp主页内容</p>
+        </div>
+        <div class="login">
+            <label for="name" class="sr-only">用户名</label>
+            <input type="text" id="name" name="username" class="form-control" placeholder="用户名">
+        </div>
+        <div class="login">
+            <label for="password" class="sr-only">用户名</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="密码">
+        </div>
+        <div class="click">
+            <input type="submit" id="submit" name="submit" class="button button-primary button-rounded button-jumbo form-control" value="登录">
+        </div>
+        <div class="register">
+            <span id="register"><a href="register.html">注册账户</a></span>
+            <span id="find"><a href="find.html">忘记密码？</a></span>
+        </div>
+        <p id="clause">继续提交即代表您同意本作者所定下的<a href="#" id="fwtk">服务条款</a>和<a href="#" id="yssm">隐私声明</a></p>
+    </form>
+    <div id="fw" class="tk">
+        <div class="login-img" id="tk-img">
+            <img src="img/timg2.jpg" alt="登录图标">
+        </div>
+        <p style="margin-top:45px; "><b>摘要</b></p>
+        <p>本文首先对下文条款进行了概括。本摘要旨在帮助您了解各项条款，但请务必阅读整个文件，因为当您同意时，
+            即表示您接受所有条款，而不仅是接受本摘要。</p>
+        <ul>
+            <li>FLH Cloud Services（以下简称“Services”）是 Fenglihui 向您提供的一套服务。</li>
+            <li>服务以“现状”提供，并不以任何形式提供担保。对于因您使用 Services 造成的任何损害，作者承担的责任极其有限。</li>
+        </ul>
+        <p><b>服务条款</b></p>
+        <ol>
+            <li>简介</li>
+            <p>下列服务条款（以下简称“条款”）管辖您对 FLH Cloud Services — Fenglihui 提供的一套在线服务（以下简称“Services”）的使用。</p>
+            <li>FlhHomepage 帐户</li>
+            <p>为了能够使用部分 Services，您需要创建一个 FlhHomepage 帐户。在注册期间，会要求您设置密码。
+                您有责任为您的密码保密，并且应对通过 FlhHomepage 帐户发生的活动负责。
+                对于因未经授权使用 FlhHomepage 帐户而产生的任何损失，Fenglihui 概不负责。</p>
+            <li>功能</li>
+            <p>访问本网站的某些功能时，必须按照网站的提示进行操作，不得将某些功能用作非法用途。</p>
+        </ol>
+    </div>
+    <div id="ys" class="tk" style="height: 540px;">
+        <div class="login-img" id="ys-img">
+            <img src="img/timg2.jpg" alt="登录图标">
+        </div>
+        <p style="text-align: center;margin-top: 50px;margin-bottom:0;font-size: 24px;">隐私权政策</p>
+        <p style="font-size: 20px;margin:5px 20px;"><b>Fenglihui 隐私声明</b></p>
+        <p style="font-size: 20px;margin: 5px 20px;"><b>在 FlhHomepage，我们认为隐私是健康互联网的基石。</b></p>
+        <p>这就是我们创建 FlhHomepage 以及所有产品的初衷，目的是让您能够更好地控制您在网上共享的信息以及与我们共享的信息。
+            我们力求只收集为大家改进 FlhHomepage 而需要的信息。</p>
+        <p>在本“隐私声明”中，我们会说明 FlhHomepage 共享的数据，并帮助您设置，以减少共享内容。
+            我们还遵守在 Fenglihui 隐私政策中规定的，有关如何获取、处理并共享我们从 FlhHomepage 收集的信息的惯例。</p>
+        <p style="font-size: 20px;margin:5px 20px;"><b>默认情况下，FlhHomepage 会共享数据，以：</b></p>
+        <p style="font-size: 16px;margin:8px 20px;"><b>为各地的用户改进性能和稳定性</b></p>
+        <ul>
+            <li>交互数据：FlhHomepage 会发送以下相关数据给我们：您与 FlhHomepage 的交互（例如，打开的选项卡和窗口的数量；
+                访问网页的数量；已安装浏览器附加组件的数量和类型；以及会话时长），以及由 Fenglihui 或我们的合作伙伴所
+                提供的 FlhHomepage 功能（例如与 FlhHomepage 搜索功能的交互以及搜索合作伙伴的推荐）。
+            </li>
+            <li>
+                技术数据：FlhHomepage 会发送以下相关信息给我们：您 FlhHomepage 的版本和语言；设备操作系统和硬件配置；
+                内存、有关崩溃和错误的基本信息；诸如更新、安全浏览和激活等自动化流程的结果。
+                当 FlhHomepage 向我们发送数据时，会临时收集您的 IP 地址作为我们服务器日志的一部分。
+            </li>
+        </ul>
+        <p>阅读针对桌面、Android 或 iOS 的遥测技术文档，或者了解如何选择退出该数据收集功能。</p>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#all").css("height",$(window).height());
+        $(window).resize(function () {
+            $("#all").css("height",$(window).height());
+        });
+        $("#fwtk").click(function () {
+           $("#login").css("display","none");
+           $("#fw").css("display","block");
+           $(document).attr("title","服务条款");
+        });
+        $("#tk-img").click(function(){
+           $("#fw").css("display","none");
+           $("#login").css("display","block");
+           $(document).attr("title","登录  继续访问  个人主页");
+        });
+        $("#yssm").click(function () {
+            $("#login").css("display","none");
+            $("#ys").css("display","block");
+            $(document).attr("title","隐私声明");
+        });
+        $("#ys-img").click(function(){
+            $("#ys").css("display","none");
+            $("#login").css("display","block");
+            $(document).attr("title","登录  继续访问  个人主页");
+        });
+    });
+</script>
+</body>
+</html>

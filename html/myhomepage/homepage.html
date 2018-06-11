@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>个人主页</title>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/nav.css">
+</head>
+<body>
+<div id="all">
+<header>
+<nav id="head">
+    <ul id="nav">
+        <li class="nav"><a href="homepage.html">首页</a></li>
+        <li class="nav"><a href="#">个人简介</a>
+            <ul class="nav_2">
+                <li><a href="#">基本信息</a></li>
+                <li><a href="#">工作经历</a></li>
+                <li><a href="#">兴趣爱好</a></li>
+            </ul>
+        </li>
+        <li class="nav"><a href="#">心路历程</a>
+            <ul class="nav_2">
+                <li><a href="#">小学</a></li>
+                <li><a href="#">初中</a></li>
+                <li><a href="#">高中</a></li>
+                <li><a href="#">大学</a></li>
+                <li><a href="#">现在</a></li>
+            </ul>
+        </li>
+        <li class="nav"><a href="#">友情链接</a>
+            <ul class="nav_2">
+                <li><a href="#">学工系统</a></li>
+                <li><a href="https://www.bilibili.com/" target="_blank">bilibili</a></li>
+                <li><a href="https://www.baidu.com/" target="_blank">百度</a></li>
+            </ul>
+        </li>
+        <li class="nav"><a href="#">帮助</a>
+        </li>
+    </ul>
+    <div id="login">
+        <a href="login.html" target="_blank" title="登录"><img src="img/timg1.jpg" alt="登录"></a>
+    </div>
+    <form id="form1" name="form1" action="php/login.php" method="post" class="form1 form-border form-color form-inline">
+        <div class="form-group">
+            <label for="username" class="sr-only">账号：</label>
+            <input type="text" name="username" id="username" class="input-style form-control" placeholder="用户名">
+        </div>
+        <div class="form-group">
+            <label for="password" class="sr-only">密码：</label>
+            <input type="password" name="password" id="password" class="input-style form-control" placeholder="密码">
+        </div>
+        <div class="form-group submit">
+            <button type="submit" name="submit" id="submit" class="button-glow button-rounded button-raised button-primary ">登录</button>
+        </div>
+        <p id="register">没有用户名?<a href="register.html" title="注册">请点击此处注册</a></p>
+    </form>
+</nav>
+</header>
+    <div>
+
+    </div>
+<footer>
+
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>评测结果查询</title>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/button.css">
+<link rel="stylesheet" href="css/pingce.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $.post("checkpingce.php",function(data){
+	            if(data<88){
+				$("#jg1").text("未通过");
+				$("#y1").text("平均分低于88分，无法申请国家奖学金");
+				if(data<79){
+				$("#jg2").text("未通过");
+				$("#y2").text("平均分低于79分，无法申请校级奖学金");
+				if(data<69){
+				$("#jg3").text("未通过");
+		        $("#y3").text("平均分低于69分，无法申请院级奖学金");
+				}
+				else{
+				$("#jg3").text("已通过");
+				}
+				}
+				else{
+				$("#jg2").text("已通过");
+				$("#jg3").text("已通过");
+				}
+				}
+				else{
+				$("#jg1").text("已通过");
+				$("#jg2").text("已通过");
+				$("#jg3").text("已通过");
+				}
+	},"text");
+	$("#pc1").click(function(){
+	$("#gz1").toggle();
+	});
+	$("#pc2").click(function(){
+	$("#gz2").toggle();
+	});
+	$("#pc3").click(function(){
+	$("#gz3").toggle();
+	});
+});
+</script>
+</head>
+<body>
+<div id="by">
+<div class="check" id="country">
+<p>奖学金评测结果查询</p>
+<div class="ss">
+<div class="xm">奖学金项目名称</div>
+<div class="jg">评测结果</div>
+<div class="yy" id="yy">未通过原因</div>
+</div>
+<div class="ss">
+<div class="xm">国家奖学金申请</div>
+<div class="jg" id="jg1"></div>
+<div class="yy" id="y1"></div>
+</div>
+<div class="pc" id="pc1">
+<span>点击查看评测规则</span>
+</div>
+<div id="gz1">
+<span>申请国家奖学金需满足平均分大于88分</span>
+</div>
+<div class="ss">
+<div class="xm">校级奖学金申请</div>
+<div class="jg" id="jg2"></div>
+<div class="yy" id="y2"></div>
+</div>
+<div class="pc" id="pc2">
+<span>点击查看评测规则</span>
+</div>
+<div id="gz2"><span>申请校级奖学金需满足平均分大于79分</span></div>
+<div class="ss">
+<div class="xm">院级奖学金申请</div>
+<div class="jg" id="jg3"></div>
+<div class="yy" id="y3"></div>
+</div>
+<div class="pc" id="pc3">
+<span>点击查看评测规则</span>
+</div>
+<div id="gz3"><span>申请院级奖学金需满足平均分大于69分</span></div>
+</div>
+</div>
+	
+</body>
+</html>

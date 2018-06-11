@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;
+padding:0;}
+#all{margin:0 auto;
+width:1066px;
+height:auto;}
+#top{margin:0 auto;
+width:1066px;
+height:80px;
+line-height:80px;}
+#top h3{text-align:center;
+color:#63C;
+font-weight:bold;}
+.alt{width:100px;
+background:#3C0;
+color:#FFF;
+text-align:center;}
+.blt{width:340px;
+text-align:center;
+font-size:16px;}
+#infor{width:900px;
+margin:0 auto;
+text-align:left;
+font-size:16px;}
+#infor td{height:50px;
+line-height:50px;
+border:2px solid #3F0;}
+#address{text-align:center;}
+#sub{margin:0 auto;
+text-align:center;}
+#but1{margin:5px auto;
+background:#60C;
+color:#FFF;}
+#but1:hover{background:#63F;
+color:#0FF;}
+.blt1{width:790px;}
+.sex{width:80px;
+line-height:50px;}
